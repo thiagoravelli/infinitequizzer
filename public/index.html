@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Infinite Quizzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Theme Input Screen -->
+    <div id="theme-screen" class="screen">
+        <h1>Welcome to Infinite Quizzer!</h1>
+        <p>Please enter a theme for your quiz:</p>
+        <input type="text" id="theme-input" maxlength="30" placeholder="Enter theme">
+        <button id="theme-submit">Submit Theme</button>
+        <p id="theme-error" class="error-message"></p>
+    </div>
+
+    <!-- Difficulty Selection Screen -->
+    <div id="difficulty-screen" class="screen">
+        <h1>Select Difficulty</h1>
+        <button class="difficulty-button" data-difficulty="Easy">Easy</button>
+        <button class="difficulty-button" data-difficulty="Medium">Medium</button>
+        <button class="difficulty-button" data-difficulty="Hard">Hard</button>
+        <button class="difficulty-button" data-difficulty="Impossible">Impossible</button>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="screen">
+        <h2 id="question-text">Question Text</h2>
+        <div id="options">
+            <button class="option-button" data-option="A">Option A</button>
+            <button class="option-button" data-option="B">Option B</button>
+            <button class="option-button" data-option="C">Option C</button>
+            <button class="option-button" data-option="D">Option D</button>
+        </div>
+        <p id="score-display">Score: 0</p>
+        <p id="mistakes-display">Mistakes: 0</p>
+    </div>
+
+    <!-- Feedback Screen -->
+    <div id="feedback-screen" class="screen">
+        <h2 id="feedback-message">Feedback Message</h2>
+        <p id="correct-answer">Correct Answer: </p>
+        <p id="explanation">Explanation: </p>
+        <button id="next-question">Next Question</button>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameover-screen" class="screen">
+        <h1>Game Over!</h1>
+        <p id="final-score">Your final score is: </p>
+        <button id="restart-game">Restart Game</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="apiHandler.js"></script>
+</body>
+</html>
